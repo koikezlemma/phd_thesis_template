@@ -1,0 +1,56 @@
+\chapter{Introduction}\label{chapter:introduction}
+
+\graphicspath{{Manuscript/Introduction/Figs/}}
+
+This is a PhD thesis template for pdflatex.
+Use \textit{pdflatex} to build latex files.
+Don't use TeX+DVI (dvipdfm), or Microtype Package doesn't work.
+If you write Japanese characters, use UTF-8 encoding. 
+
+This file specifies the following items:
+\begin{itemize}
+	\item Font,
+	\item Appearance of Text (Hyphenation and Letter-spacing),
+	\item Page Layout,
+	\item Theorem Environments,
+	\item Header and Footer,
+	\item Chapter Header,
+	\item Table of Contents,
+	\item Clickable PDF,
+	\item Title Page and PDF-title.
+\end{itemize}
+
+The class file was made for Sokendai students.
+If you are not a Sokendai student, rewrite the maketitle command in the class file.
+
+We recommend to use \textit{TeX Live} to manage \LaTeX ~packages because this class file uses many packages. 
+Before loading the class file, update all packages to the latest version using Tex Live.
+
+
+%=========================================================================
+\section{Managing todo items}
+\makeatletter
+\newcommand{\verbatimfont}[1]{\def\verbatim@font{#1}}%
+\makeatother
+\verbatimfont{\rmfamily}
+
+You can make todo notes using the following command:
+\begin{verbatim}
+\mytodo[inline]{This is a inline todo note} 
+\mytodo{This is a todo note at margin}.
+\end{verbatim}
+
+In order to display the todo items, use \textit{todo} option.
+\begin{verbatim}
+\documentclass[todo]{sokendai_thesis}
+\end{verbatim}
+
+If you do not want to display the items,
+use the following command.
+\begin{verbatim}
+\documentclass{sokendai_thesis}
+\end{verbatim}
+
+
+
+
