@@ -19,7 +19,7 @@
 % =========================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{sokendai_thesis}[2015/05/03 v1.2]
+\ProvidesClass{sokendai_thesis}[2015/06/21 v1.3]
 \LoadClass[12pt,a4paper,twoside]{book}
 
 
@@ -74,7 +74,9 @@
 %  Appearance of Text (Hyphenation and Letter-spacing)
 % =====================================================
 
-\usepackage[final, stretch=30, shrink=60]{microtype}
+%\usepackage{microtype}
+%\usepackage[final, stretch=30, shrink=60]{microtype}
+\usepackage[final, stretch=60, shrink=20]{microtype}
 
 
 % =====================================================
@@ -239,6 +241,22 @@ in partial fulfillment of the requirements for the degree of
 \end{spacing}
 
 \thispagestyle{empty}
+
+%% Committee
+%\newpage
+%\begin{center}
+%{\Large \bfseries Committee}
+%\end{center}
+%
+%	\begin{center}
+%		\begin{tabular}{ll}
+%			AAA BBB (Chair)    & National Institute of Informatics / Sokendai \\
+%			CCC DDD              & EEE University \\
+%			FFF GGG              & National Institute of Informatics / Sokendai 
+%		\end{tabular}
+%	\end{center}
+%\thispagestyle{empty}
+
 
 % PDF title
 \hypersetup{
