@@ -7,6 +7,7 @@ Don't use TeX+DVI (dvipdfm), or Microtype Package doesn't work.
 If you write Japanese characters, use UTF-8 encoding.
 
 This file specifies the following items:
+
 * Font,
 * Appearance of Text (Hyphenation and Letter-spacing),
 * Page Layout,

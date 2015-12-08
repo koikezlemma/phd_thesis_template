@@ -1,0 +1,5 @@
+*.log
+*.aux
+main.*
+!main.tex
+!main.pdf
