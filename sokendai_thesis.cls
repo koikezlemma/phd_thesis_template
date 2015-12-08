@@ -19,7 +19,7 @@
 % =========================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{sokendai_thesis}[2015/06/21 v1.3]
+\ProvidesClass{sokendai_thesis}[2015/11/22 v1.4]
 \LoadClass[12pt,a4paper,twoside]{book}
 
 
@@ -36,7 +36,7 @@
 %\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage[chapter]{algorithm}
 \usepackage{algpseudocode}
-\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}} 
+\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}}
 
 % Dummy text (for testing)
 %\usepackage{lipsum}
@@ -126,10 +126,10 @@
 % Get rid of page numbers on empty pages before chapters
 \makeatletter
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-	\hbox{}
-	\thispagestyle{empty}
-	\newpage
-	\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  \hbox{}
+  \thispagestyle{empty}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 \makeatother
 
 
@@ -140,7 +140,7 @@
 %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 %\usepackage[Lenny]{fncychap}
 
-% Options: 
+% Options:
 \usepackage[palatino]{quotchap}
 
 % =====================================================
@@ -157,8 +157,8 @@
 % =====================================================
 
 \usepackage{color}
-\definecolor{redorange}{cmyk}{ 0, 0.77, 0.87, 0} 
-\definecolor{forest}{cmyk}{ 0.91, 0, 0.88, 0.12} 
+\definecolor{redorange}{cmyk}{ 0, 0.77, 0.87, 0}
+\definecolor{forest}{cmyk}{ 0.91, 0, 0.88, 0.12}
 \definecolor{steelblue}{cmyk}{ 0.61, 0.28, 0, 0.29}
 \usepackage{hyperref}
 \hypersetup{
@@ -196,6 +196,14 @@
 % ------------------------------------------------------
 
 \renewcommand{\maketitle}{
+
+% PDF title
+\hypersetup{
+  pdftitle={\@title},
+  pdfauthor={\@author},
+  pdfsubject={PhD Thesis},
+  pdfkeywords={\@keywords}
+}
 
 \begin{spacing}{2}
 \centering
@@ -248,23 +256,15 @@ in partial fulfillment of the requirements for the degree of
 %{\Large \bfseries Committee}
 %\end{center}
 %
-%	\begin{center}
-%		\begin{tabular}{ll}
-%			AAA BBB (Chair)    & National Institute of Informatics / Sokendai \\
-%			CCC DDD              & EEE University \\
-%			FFF GGG              & National Institute of Informatics / Sokendai 
-%		\end{tabular}
-%	\end{center}
+%\begin{center}
+%  \begin{tabular}{ll}
+%    AAA BBB (Chair)      & National Institute of Informatics / Sokendai \\
+%    CCC DDD              & EEE University \\
+%    FFF GGG              & National Institute of Informatics / Sokendai
+%  \end{tabular}
+%\end{center}
 %\thispagestyle{empty}
 
-
-% PDF title
-\hypersetup{
- pdftitle={\@title},
- pdfauthor={\@author},
- pdfsubject={PhD Thesis},
- pdfkeywords={\@keywords}
-}
 
 }
 
@@ -302,7 +302,7 @@ in partial fulfillment of the requirements for the degree of
 %    - Draft version
 %        - \documentclass[todo]{sokendai_thesis}
 %        - Todo notes are printed using the following command
-%            - \mytodo[inline]{This is a inline todo note} 
+%            - \mytodo[inline]{This is a inline todo note}
 %            - \mytodo{This is a todo note at margin}
 %
 
